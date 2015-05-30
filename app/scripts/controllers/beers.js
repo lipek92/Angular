@@ -15,3 +15,14 @@ app.controller('BeerMenuController', function() {
     return (this.menu === menu);
   };
 });
+
+app.controller('CommentController', function(){
+
+  this.comment = {};
+  this.comment.createdOn = Date.now();
+
+  this.addComment = function(beer){
+    beer.comments.push(this.comment);
+    this.comment = {};
+  };
+});

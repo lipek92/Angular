@@ -7,8 +7,9 @@
  * # MainCtrl
  * Controller of the angularApp
  */
-var app = angular.module('angularApp')
-  .controller('MainCtrl', function ($scope) {
+var app = angular.module('angularApp');
+
+app.controller('MainCtrl', function ($scope) {
 
   });
 

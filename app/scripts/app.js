@@ -54,11 +54,11 @@ var beers = [{
   comments: [{
     text: "Moje ulubioneee!",
     author: "kaziu",
-    createdOn: 1397490980837
+    createdOn: 1391490980837
   }, {
     text: "Nie smakuje mi",
     author: "smakosz",
-    createdOn: 1397490980837
+    createdOn: 1397420980837
   }]
 }, {
   name: 'Tyskie',
@@ -71,11 +71,11 @@ var beers = [{
   comments: [{
     text: "Bardzo smaczne!",
     author: "waldek",
-    createdOn: 1397490980837
+    createdOn: 1337490980837
   }, {
     text: "Polecam!",
     author: "rysiu132",
-    createdOn: 1397490980837
+    createdOn: 1394490980837
   }]
 }];
 
