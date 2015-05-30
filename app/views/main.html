@@ -1,18 +1,13 @@
 <div class="jumbotron">
-  <last-comments></last-comments>
+  <h2>3 najnowsze komentarze:</h2>
+  <div class="list-group-item" ng-repeat="comment in comments | limitTo:3 | orderBy:'-createdOn'" >
+    <b>{{comment.bearName}}</b> - {{comment.text}} - <i>{{comment.createdOn | date}}</i>
+  </div>
 </div>
 
 <div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
+  <h4>Baza piw</h4>
   <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+    Aplikacja stworzona na potrzeby przedmiotu Bogaty Interfejs Użytkownika :-)
   </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
 </div>

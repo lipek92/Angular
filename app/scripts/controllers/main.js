@@ -8,9 +8,8 @@
  * Controller of the angularApp
  */
 var app = angular.module('angularApp');
-
-app.controller('MainCtrl', function ($scope) {
-
+  app.controller('MainCtrl', function ($scope, beerService) {
+    $scope.comments = beerService.getComments;
   });
 
 

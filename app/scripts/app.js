@@ -37,9 +37,21 @@ app.service('beerService', function()
   var getBeers = function(){
     return beers;
   }
+  var getComments = function(){
+    var comments = [];
+
+    beers.forEach(function(beer) {
+      beer.comments.forEach(function(comment) {
+        comment.bearName = beer.name;
+        comments.push(comment);
+      });
+    });
+    return comments;
+  }
 
   return {
-    getBeers: getBeers()
+    getBeers: getBeers(),
+    getComments: getComments()
   }
 });
 
@@ -54,7 +66,7 @@ var beers = [{
   comments: [{
     text: "Moje ulubioneee!",
     author: "kaziu",
-    createdOn: 1391490980837
+    createdOn: 1291490980837
   }, {
     text: "Nie smakuje mi",
     author: "smakosz",
