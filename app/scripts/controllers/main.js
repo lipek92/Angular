@@ -9,7 +9,18 @@
  */
 var app = angular.module('angularApp');
   app.controller('MainCtrl', function ($scope, beerService) {
-    $scope.comments = beerService.getComments;
+
+    $scope.beers = beerService.getBeers;
+    $scope.comments = [];
+
+      $scope.beers.forEach(function(beer) {
+        beer.comments.forEach(function(comment) {
+          comment.bearName = beer.name;
+          $scope.comments.push(comment);
+        });
+      });
+
+
   });
 
 

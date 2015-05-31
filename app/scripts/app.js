@@ -37,22 +37,9 @@ app.service('beerService', function()
   var getBeers = function(){
     return beers;
   }
-  var getComments = function(){
-    var comments = [];
-
-    beers.forEach(function(beer) {
-      beer.comments.forEach(function(comment) {
-        comment.bearName = beer.name;
-        comments.push(comment);
-      });
-    });
-    return comments;
-  }
-
-  return {
-    getBeers: getBeers(),
-    getComments: getComments()
-  }
+    return {
+    getBeers: getBeers()
+    }
 });
 
 var beers = [{
