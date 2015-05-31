@@ -1,0 +1,4 @@
+<h2>Najnowsze komentarze:</h2>
+<div class="list-group-item" ng-repeat="comment in comments | orderBy:'-createdOn' | limitTo:3" >
+  <b>{{comment.bearName}}</b> - {{comment.text}} - <i>{{comment.createdOn | date}}</i>
+</div>

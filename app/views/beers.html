@@ -3,55 +3,7 @@
 
     <h3>{{beer.name}}</h3>
 
-    <section ng-controller="BeerMenuController as beerMenu">
-      <ul class="nav nav-pills">
-        <li ng-class="{ active:beerMenu.isSet(1) }">
-          <a href="" ng-click="beerMenu.setMenu(1)">Opis</a>
-        </li>
-        <li ng-class="{ active:beerMenu.isSet(2) }">
-          <a href="" ng-click="beerMenu.setMenu(2)">Komentarze</a>
-        </li>
-      </ul>
-      <div ng-show="beerMenu.isSet(1)">
-        <h4>Opis</h4>
-        <blockquote>{{beer.description}}</blockquote>
-      </div>
-      <div ng-show="beerMenu.isSet(2)">
-        <ul>
-          <h4>Komentarze</h4>
-          <li ng-repeat="comment in beer.comments">
-            <blockquote>
-              {{comment.text}}
-              <cite class="clearfix">~{{comment.author}}, {{comment.createdOn | date}}</cite>
-            </blockquote>
-          </li>
-        </ul>
-
-
-        <form name="commentForm" ng-controller="CommentController as commentCtrl" ng-submit="commentCtrl.addComment(beer)">
-
-<!--          <blockquote>
-            {{commentCtrl.comment.text}}
-            <cite class="clearfix">{{commentCtrl.comment.author}}</cite>
-          </blockquote>-->
-
-          <h4>Dodaj komentarz</h4>
-          <fieldset class="form-group">
-            <textarea ng-model="commentCtrl.comment.text" class="form-control" placeholder="Wpisz komentarz..." title="Komentarz" required></textarea>
-          </fieldset>
-          <fieldset class="form-group">
-            <input ng-model="commentCtrl.comment.author" class="form-control" placeholder="Nick..." title="Nick" required />
-          </fieldset>
-          <fieldset class="form-group">
-            <input type="submit" class="btn btn-primary pull-right" value="Dodaj komentarz" />
-          </fieldset>
-        </form>
-
-     </div>
-    </section>
-
-
-
+    <beer-menu></beer-menu>
 
   </div>
 

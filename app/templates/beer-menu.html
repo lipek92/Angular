@@ -1,0 +1,16 @@
+<section>
+  <ul class="nav nav-pills">
+    <li ng-class="{ active:beerMenu.isSet(1) }">
+      <a href="" ng-click="beerMenu.setMenu(1)">Opis</a>
+    </li>
+    <li ng-class="{ active:beerMenu.isSet(2) }">
+      <a href="" ng-click="beerMenu.setMenu(2)">Komentarze</a>
+    </li>
+  </ul>
+  <div ng-show="beerMenu.isSet(1)">
+    <beer-description></beer-description>
+  </div>
+  <div ng-show="beerMenu.isSet(2)">
+    <beer-comments></beer-comments>
+  </div>
+</section>
