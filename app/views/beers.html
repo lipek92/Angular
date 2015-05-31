@@ -22,7 +22,7 @@
           <li ng-repeat="comment in beer.comments">
             <blockquote>
               {{comment.text}}
-              <cite class="clearfix">{{comment.author}}, {{comment.createdOn | date}}</cite>
+              <cite class="clearfix">~{{comment.author}}, {{comment.createdOn | date}}</cite>
             </blockquote>
           </li>
         </ul>

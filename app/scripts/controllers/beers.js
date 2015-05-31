@@ -1,4 +1,4 @@
-var app = angular.module('angularApp');
+var app = angular.module('beersModule');
 
 app.controller('BeersCtrl', function ($scope, beerService) {
     $scope.beers = beerService.getBeers;

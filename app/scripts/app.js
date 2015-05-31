@@ -10,6 +10,7 @@
  */
 var app = angular
   .module('angularApp', [
+    'beersModule',
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -32,6 +33,8 @@ var app = angular
       });
   });
 
+var beersModule = angular.module('beersModule', []);
+
 app.service('beerService', function()
 {
   var getBeers = function(){
@@ -44,37 +47,32 @@ app.service('beerService', function()
 
 var beers = [{
   name: 'Johannes',
-  description: "Dobre piwko!",
-  images: [
-    "images/johannes1.gif",
-    "images/johannes2.gif",
-    "images/johannes3.gif"
-  ],
+  description: "Piwo jasne, pełne, pasteryzowane; Skład: woda, słód jęczmienny, chmiel. Zawartość alkoholu: 6,5% obj, Ekstrakt: 14,5% wag.",
   comments: [{
     text: "Moje ulubioneee!",
     author: "kaziu",
     createdOn: 1291490980837
   }, {
-    text: "Nie smakuje mi",
+    text: "Najlepsze jakie pilem, polecam!",
     author: "smakosz",
     createdOn: 1397420980837
   }]
 }, {
-  name: 'Tyskie',
-  description: "Tyskie piwo.",
-  images: [
-    "images/tyskie1.gif",
-    "images/tyskie2.gif",
-    "images/tyskie3.gif",
-  ],
+  name: 'Żywiec',
+  description: "Piwo jasne, 12,5% wag., alk. 5,6% obj., składniki: woda, słód jęczmienny, chmiel. Pasteryzowane.",
   comments: [{
     text: "Bardzo smaczne!",
     author: "waldek",
     createdOn: 1337490980837
   }, {
-    text: "Polecam!",
+    text: "Moim zdaniem ostatnio nie jest za dobry :(",
     author: "rysiu132",
     createdOn: 1394490980837
   }]
-}];
+}, {
+  name: 'Kozel',
+  description: "Piwo jasne, alk. 4,6% obj., pasteryzowane. Składniki: woda, słody jęczmienne, chmiel i wyciąg z szyszek chmielowych.",
+  comments: []
+}]
+
 
